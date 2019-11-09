@@ -1,5 +1,5 @@
 //
-//  FacadeDomestika.swift
+//  FacadeTrailers.swift
 //  Domestika
 //
 //  Created by Enrique Blasco Blanquer on 09/11/2019.
@@ -9,13 +9,13 @@
 import UIKit
 import BaseLibrary
 
-class FacadeDomestika:  FacadeBase {
+class FacadeTrailers: FacadeBase {
     
-    static let instance = FacadeDomestika()
+    static let instance = FacadeTrailers()
     
     override init() {
         super.init()
-        facadeName = "course"
+        facadeName = "trailers"
         facade = FacadeCourse.instance
     }
     
@@ -23,6 +23,5 @@ class FacadeDomestika:  FacadeBase {
     {
         return try Execute(ParseCourse(), command: "courses") as! Array<Course>
     }
-    
-    
 }
+

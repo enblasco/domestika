@@ -11,11 +11,11 @@ import BaseLibrary
 
 class FacadeCourse: FacadeClient, URLSessionDelegate {
     static let instance = FacadeCourse()
-    let HOST = "https://my-json-server.typicode.com/emilioicai/trailers/"
+    let HOST = "https://my-json-server.typicode.com/emilioicai/"
     
     override func WriteResponseToStream(_ facade: String, command: String, argsMessage: String!, datos: inout AnyObject?) throws{
         
-        let url = HOST+command
+        let url = HOST+facade+"/"+command
         
         let req = NSMutableURLRequest(url: URL(string: url)!)
         

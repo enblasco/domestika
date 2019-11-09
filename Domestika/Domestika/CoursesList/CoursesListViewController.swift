@@ -19,7 +19,9 @@ class CoursesListViewController: MyView {
     func getInfo(){
         let cmd = CmdGetCourses()
         cmd.callbacks =  CommandCallbacks(
-            handlerStart: {},
+            handlerStart: {
+                self.showProgress(true)
+        },
             handlerFinish: {
                 self.courses = cmd.courses!
                 

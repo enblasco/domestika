@@ -11,7 +11,7 @@ import BaseLibrary
 
 class CmdGetCourses: CommandBase {
     var courses:Array<Course>?
-    let domestika = FacadeDomestika.instance
+    let trailer = FacadeTrailers.instance
     override init()
     {
         super.init()
@@ -19,7 +19,7 @@ class CmdGetCourses: CommandBase {
     }
     
     override func execute() throws {
-        courses = try domestika.getCourses()
+        courses = try trailer.getCourses()
     }
         
 }
