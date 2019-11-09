@@ -12,7 +12,7 @@ import BaseLibrary
 class Course: ModelBase{
     var id:NSNumber?
     var thumbnailUrl:String?
-    var title:String = ""
+    var title:String?
     var trailerUrl:String?
     var descript:String?
     var location:String?

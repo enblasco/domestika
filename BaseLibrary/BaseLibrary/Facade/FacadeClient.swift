@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FacadeClient: NSObject {
+open class FacadeClient: NSObject {
     public let POST = "POST"
     public let GET = "GET"
     
@@ -55,7 +55,7 @@ class FacadeClient: NSObject {
     
     }
     
-    open func tratarJson(_ datos: Data) -> AnyObject?
+    open func setJSON(_ datos: Data) -> AnyObject?
     {
         do{
             if let json = try JSONSerialization.jsonObject(with: datos, options: JSONSerialization.ReadingOptions.allowFragments) as AnyObject?

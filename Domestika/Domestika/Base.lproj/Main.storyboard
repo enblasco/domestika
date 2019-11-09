@@ -161,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="303" y="160"/>
         </scene>
-        <!--View Controller-->
+        <!--Courses List View Controller-->
         <scene sceneID="AMD-1H-VyB">
             <objects>
-                <viewController id="enX-v7-PYd" sceneMemberID="viewController">
+                <viewController id="enX-v7-PYd" customClass="CoursesListViewController" customModule="Domestika" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZQl-hW-6Cl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

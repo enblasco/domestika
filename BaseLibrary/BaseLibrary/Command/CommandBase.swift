@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class CommandBase: NSObject {
+open class CommandBase: NSObject {
     open var succesMessage: String = ""
     open var needInternet: Bool = true
     open var cancel = false

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB6E133B2376DEBC002FEF40 /* FacadeDomestika.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E133A2376DEBC002FEF40 /* FacadeDomestika.swift */; };
+		EB6E133D2376E000002FEF40 /* FacadeCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E133C2376E000002FEF40 /* FacadeCourse.swift */; };
+		EB6E13402376E0CA002FEF40 /* ParseCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E133F2376E0CA002FEF40 /* ParseCourse.swift */; };
+		EB6E13422376E51A002FEF40 /* CmdGetCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E13412376E51A002FEF40 /* CmdGetCourses.swift */; };
 		EB99B17E2376BAF600B93C9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B17D2376BAF600B93C9A /* AppDelegate.swift */; };
 		EB99B1802376BAF600B93C9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B17F2376BAF600B93C9A /* SceneDelegate.swift */; };
 		EB99B1852376BAF600B93C9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB99B1832376BAF600B93C9A /* Main.storyboard */; };
@@ -50,6 +54,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EB6E133A2376DEBC002FEF40 /* FacadeDomestika.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadeDomestika.swift; sourceTree = "<group>"; };
+		EB6E133C2376E000002FEF40 /* FacadeCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadeCourse.swift; sourceTree = "<group>"; };
+		EB6E133F2376E0CA002FEF40 /* ParseCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCourse.swift; sourceTree = "<group>"; };
+		EB6E13412376E51A002FEF40 /* CmdGetCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmdGetCourses.swift; sourceTree = "<group>"; };
 		EB99B17A2376BAF600B93C9A /* Domestika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Domestika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB99B17D2376BAF600B93C9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB99B17F2376BAF600B93C9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +89,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB6E13372376DE51002FEF40 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				EB6E13412376E51A002FEF40 /* CmdGetCourses.swift */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+		EB6E13392376DE9F002FEF40 /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				EB6E133A2376DEBC002FEF40 /* FacadeDomestika.swift */,
+				EB6E133C2376E000002FEF40 /* FacadeCourse.swift */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
+		EB6E133E2376E0A1002FEF40 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				EB6E133F2376E0CA002FEF40 /* ParseCourse.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
 		EB99B1712376BAF600B93C9A = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +134,9 @@
 		EB99B17C2376BAF600B93C9A /* Domestika */ = {
 			isa = PBXGroup;
 			children = (
+				EB6E133E2376E0A1002FEF40 /* Parser */,
+				EB6E13392376DE9F002FEF40 /* Facade */,
+				EB6E13372376DE51002FEF40 /* Command */,
 				EB99B1D62376DA9C00B93C9A /* CoursesList */,
 				EB99B1CF2376D6C300B93C9A /* Model */,
 				EB99B1A02376CFE600B93C9A /* NavigationController */,
@@ -278,10 +314,14 @@
 				EB99B1932376BBF700B93C9A /* LoginViewController.swift in Sources */,
 				EB99B17E2376BAF600B93C9A /* AppDelegate.swift in Sources */,
 				EB99B19F2376C7BF00B93C9A /* UIView+fade.swift in Sources */,
+				EB6E13402376E0CA002FEF40 /* ParseCourse.swift in Sources */,
 				EB99B19B2376BF9300B93C9A /* UIButton+cornerRadius.swift in Sources */,
 				EB99B1962376BC8E00B93C9A /* GradientView.swift in Sources */,
 				EB99B1D92376DAB900B93C9A /* CoursesListViewController.swift in Sources */,
+				EB6E133B2376DEBC002FEF40 /* FacadeDomestika.swift in Sources */,
+				EB6E133D2376E000002FEF40 /* FacadeCourse.swift in Sources */,
 				EB99B1A22376D01000B93C9A /* NavigationViewController.swift in Sources */,
+				EB6E13422376E51A002FEF40 /* CmdGetCourses.swift in Sources */,
 				EB99B1802376BAF600B93C9A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

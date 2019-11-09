@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Execute: NSObject {
+open class Execute: NSObject {
     
     var commands = Array<CommandBase>()
     

@@ -7,19 +7,33 @@
 //
 
 import UIKit
+import BaseLibrary
 
-class CoursesListViewController: UIViewController {
-
+class CoursesListViewController: MyView {
+    var courses:Array<Course>?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        getInfo()
     }
     
     func getInfo(){
-        
+        let cmd = CmdGetCourses()
+        cmd.callbacks =  CommandCallbacks(
+            handlerStart: {},
+            handlerFinish: {
+                self.courses = cmd.courses!
+                
+        },
+            handlerRetry: {
+                self.getInfo()
+        },
+            handlerAccept: {
+                
+        }
+        )
+        self.execute(cmd)
     }
     
-
-
+    
+    
 }

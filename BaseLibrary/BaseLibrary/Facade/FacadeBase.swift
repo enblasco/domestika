@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FacadeBase: NSObject {
+open class FacadeBase: NSObject {
     
     open var facadeName = ""
     open var facade: FacadeClient?

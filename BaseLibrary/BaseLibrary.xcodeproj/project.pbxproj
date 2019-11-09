@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB6E13452376E7DD002FEF40 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E13442376E7DD002FEF40 /* MyView.swift */; };
 		EB99B1B32376D35900B93C9A /* BaseLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = EB99B1B12376D35900B93C9A /* BaseLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB99B1BB2376D3EE00B93C9A /* FacadeBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1BA2376D3EE00B93C9A /* FacadeBase.swift */; };
 		EB99B1BD2376D41300B93C9A /* FacadeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1BC2376D41300B93C9A /* FacadeClient.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB6E13442376E7DD002FEF40 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		EB99B1AE2376D35900B93C9A /* BaseLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB99B1B12376D35900B93C9A /* BaseLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseLibrary.h; sourceTree = "<group>"; };
 		EB99B1B22376D35900B93C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB6E13432376E798002FEF40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB6E13442376E7DD002FEF40 /* MyView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EB99B1A42376D35900B93C9A = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		EB99B1B02376D35900B93C9A /* BaseLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				EB6E13432376E798002FEF40 /* View */,
 				EB99B1DA2376DB0E00B93C9A /* Command */,
 				EB99B1CC2376D61300B93C9A /* Model */,
 				EB99B1B92376D3B700B93C9A /* Facade */,
@@ -183,6 +194,7 @@
 				EB99B1E02376DB5A00B93C9A /* Reachability.swift in Sources */,
 				EB99B1BD2376D41300B93C9A /* FacadeClient.swift in Sources */,
 				EB99B1BB2376D3EE00B93C9A /* FacadeBase.swift in Sources */,
+				EB6E13452376E7DD002FEF40 /* MyView.swift in Sources */,
 				EB99B1E22376DC5100B93C9A /* Execute.swift in Sources */,
 				EB99B1CE2376D62200B93C9A /* ModelBase.swift in Sources */,
 				EB99B1BF2376D41E00B93C9A /* Parser.swift in Sources */,
