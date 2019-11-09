@@ -14,6 +14,10 @@
 		EB99B18A2376BAFB00B93C9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB99B1882376BAFB00B93C9A /* LaunchScreen.storyboard */; };
 		EB99B1932376BBF700B93C9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1922376BBF700B93C9A /* LoginViewController.swift */; };
 		EB99B1962376BC8E00B93C9A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1952376BC8E00B93C9A /* GradientView.swift */; };
+		EB99B1982376BE7000B93C9A /* loginvideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EB99B1972376BE7000B93C9A /* loginvideo.mp4 */; };
+		EB99B19B2376BF9300B93C9A /* UIButton+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B19A2376BF9300B93C9A /* UIButton+cornerRadius.swift */; };
+		EB99B19D2376C58200B93C9A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB99B19C2376C58200B93C9A /* Colors.xcassets */; };
+		EB99B19F2376C7BF00B93C9A /* UIView+fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B19E2376C7BF00B93C9A /* UIView+fade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		EB99B18B2376BAFB00B93C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB99B1922376BBF700B93C9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB99B1952376BC8E00B93C9A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		EB99B1972376BE7000B93C9A /* loginvideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginvideo.mp4; sourceTree = "<group>"; };
+		EB99B19A2376BF9300B93C9A /* UIButton+cornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+cornerRadius.swift"; sourceTree = "<group>"; };
+		EB99B19C2376C58200B93C9A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		EB99B19E2376C7BF00B93C9A /* UIView+fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fade.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		EB99B17C2376BAF600B93C9A /* Domestika */ = {
 			isa = PBXGroup;
 			children = (
+				EB99B1992376BF7300B93C9A /* Extensions */,
 				EB99B1942376BC6900B93C9A /* Resources */,
 				EB99B1912376BBBF00B93C9A /* Login */,
 				EB99B17D2376BAF600B93C9A /* AppDelegate.swift */,
@@ -66,6 +75,7 @@
 				EB99B1862376BAFB00B93C9A /* Assets.xcassets */,
 				EB99B1882376BAFB00B93C9A /* LaunchScreen.storyboard */,
 				EB99B18B2376BAFB00B93C9A /* Info.plist */,
+				EB99B19C2376C58200B93C9A /* Colors.xcassets */,
 			);
 			path = Domestika;
 			sourceTree = "<group>";
@@ -81,9 +91,19 @@
 		EB99B1942376BC6900B93C9A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EB99B1972376BE7000B93C9A /* loginvideo.mp4 */,
 				EB99B1952376BC8E00B93C9A /* GradientView.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EB99B1992376BF7300B93C9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB99B19A2376BF9300B93C9A /* UIButton+cornerRadius.swift */,
+				EB99B19E2376C7BF00B93C9A /* UIView+fade.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,7 +164,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB99B19D2376C58200B93C9A /* Colors.xcassets in Resources */,
 				EB99B18A2376BAFB00B93C9A /* LaunchScreen.storyboard in Resources */,
+				EB99B1982376BE7000B93C9A /* loginvideo.mp4 in Resources */,
 				EB99B1872376BAFB00B93C9A /* Assets.xcassets in Resources */,
 				EB99B1852376BAF600B93C9A /* Main.storyboard in Resources */,
 			);
@@ -159,6 +181,8 @@
 			files = (
 				EB99B1932376BBF700B93C9A /* LoginViewController.swift in Sources */,
 				EB99B17E2376BAF600B93C9A /* AppDelegate.swift in Sources */,
+				EB99B19F2376C7BF00B93C9A /* UIView+fade.swift in Sources */,
+				EB99B19B2376BF9300B93C9A /* UIButton+cornerRadius.swift in Sources */,
 				EB99B1962376BC8E00B93C9A /* GradientView.swift in Sources */,
 				EB99B1802376BAF600B93C9A /* SceneDelegate.swift in Sources */,
 			);
@@ -307,6 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A3L92LM3VG;
 				INFOPLIST_FILE = Domestika/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = es.eblasco.Domestika;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,6 +350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A3L92LM3VG;
 				INFOPLIST_FILE = Domestika/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = es.eblasco.Domestika;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
