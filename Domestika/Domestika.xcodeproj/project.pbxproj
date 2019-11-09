@@ -18,6 +18,7 @@
 		EB99B19B2376BF9300B93C9A /* UIButton+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B19A2376BF9300B93C9A /* UIButton+cornerRadius.swift */; };
 		EB99B19D2376C58200B93C9A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB99B19C2376C58200B93C9A /* Colors.xcassets */; };
 		EB99B19F2376C7BF00B93C9A /* UIView+fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B19E2376C7BF00B93C9A /* UIView+fade.swift */; };
+		EB99B1A22376D01000B93C9A /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1A12376D01000B93C9A /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EB99B19A2376BF9300B93C9A /* UIButton+cornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+cornerRadius.swift"; sourceTree = "<group>"; };
 		EB99B19C2376C58200B93C9A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EB99B19E2376C7BF00B93C9A /* UIView+fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fade.swift"; sourceTree = "<group>"; };
+		EB99B1A12376D01000B93C9A /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		EB99B17C2376BAF600B93C9A /* Domestika */ = {
 			isa = PBXGroup;
 			children = (
+				EB99B1A02376CFE600B93C9A /* NavigationController */,
 				EB99B1992376BF7300B93C9A /* Extensions */,
 				EB99B1942376BC6900B93C9A /* Resources */,
 				EB99B1912376BBBF00B93C9A /* Login */,
@@ -104,6 +107,14 @@
 				EB99B19E2376C7BF00B93C9A /* UIView+fade.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EB99B1A02376CFE600B93C9A /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				EB99B1A12376D01000B93C9A /* NavigationViewController.swift */,
+			);
+			path = NavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 				EB99B19F2376C7BF00B93C9A /* UIView+fade.swift in Sources */,
 				EB99B19B2376BF9300B93C9A /* UIButton+cornerRadius.swift in Sources */,
 				EB99B1962376BC8E00B93C9A /* GradientView.swift in Sources */,
+				EB99B1A22376D01000B93C9A /* NavigationViewController.swift in Sources */,
 				EB99B1802376BAF600B93C9A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -115,6 +115,9 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="6aW-ZV-afp" kind="presentation" modalPresentationStyle="currentContext" id="qTv-LJ-kpF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -140,6 +143,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-537.68115942028987" y="159.78260869565219"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="7Rx-nx-SCA">
+            <objects>
+                <navigationController id="6aW-ZV-afp" customClass="NavigationViewController" customModule="Domestika" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LSi-cA-Mrh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eP4-jo-rdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztJ-vH-EH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="160"/>
         </scene>
     </scenes>
     <resources>
