@@ -21,6 +21,8 @@
 		EB99B1A22376D01000B93C9A /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1A12376D01000B93C9A /* NavigationViewController.swift */; };
 		EB99B1C82376D57F00B93C9A /* BaseLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB99B1C72376D57500B93C9A /* BaseLibrary.framework */; };
 		EB99B1C92376D57F00B93C9A /* BaseLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB99B1C72376D57500B93C9A /* BaseLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB99B1D42376D7BD00B93C9A /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1D32376D7BD00B93C9A /* Course.swift */; };
+		EB99B1D92376DAB900B93C9A /* CoursesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1D82376DAB900B93C9A /* CoursesListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		EB99B19E2376C7BF00B93C9A /* UIView+fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fade.swift"; sourceTree = "<group>"; };
 		EB99B1A12376D01000B93C9A /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		EB99B1C22376D57500B93C9A /* BaseLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BaseLibrary.xcodeproj; path = ../BaseLibrary/BaseLibrary.xcodeproj; sourceTree = "<group>"; };
+		EB99B1D32376D7BD00B93C9A /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		EB99B1D82376DAB900B93C9A /* CoursesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		EB99B17C2376BAF600B93C9A /* Domestika */ = {
 			isa = PBXGroup;
 			children = (
+				EB99B1D62376DA9C00B93C9A /* CoursesList */,
 				EB99B1CF2376D6C300B93C9A /* Model */,
 				EB99B1A02376CFE600B93C9A /* NavigationController */,
 				EB99B1992376BF7300B93C9A /* Extensions */,
@@ -166,8 +171,17 @@
 		EB99B1CF2376D6C300B93C9A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB99B1D32376D7BD00B93C9A /* Course.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EB99B1D62376DA9C00B93C9A /* CoursesList */ = {
+			isa = PBXGroup;
+			children = (
+				EB99B1D82376DAB900B93C9A /* CoursesListViewController.swift */,
+			);
+			path = CoursesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,11 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB99B1D42376D7BD00B93C9A /* Course.swift in Sources */,
 				EB99B1932376BBF700B93C9A /* LoginViewController.swift in Sources */,
 				EB99B17E2376BAF600B93C9A /* AppDelegate.swift in Sources */,
 				EB99B19F2376C7BF00B93C9A /* UIView+fade.swift in Sources */,
 				EB99B19B2376BF9300B93C9A /* UIButton+cornerRadius.swift in Sources */,
 				EB99B1962376BC8E00B93C9A /* GradientView.swift in Sources */,
+				EB99B1D92376DAB900B93C9A /* CoursesListViewController.swift in Sources */,
 				EB99B1A22376D01000B93C9A /* NavigationViewController.swift in Sources */,
 				EB99B1802376BAF600B93C9A /* SceneDelegate.swift in Sources */,
 			);

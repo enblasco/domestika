@@ -153,10 +153,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="enX-v7-PYd" kind="relationship" relationship="rootViewController" id="cPT-gw-LEw"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztJ-vH-EH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="303" y="160"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AMD-1H-VyB">
+            <objects>
+                <viewController id="enX-v7-PYd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZQl-hW-6Cl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2eI-pA-qsZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="16E-R5-4SV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybL-PB-4Tv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="163"/>
         </scene>
     </scenes>
     <resources>

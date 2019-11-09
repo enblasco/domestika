@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ModelBase: NSObject {
+open class ModelBase: NSObject {
     open func parseJson(_ json: NSDictionary)
         {
             let dictionary = generateDictionary()

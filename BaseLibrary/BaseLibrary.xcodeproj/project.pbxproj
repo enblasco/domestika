@@ -12,6 +12,10 @@
 		EB99B1BD2376D41300B93C9A /* FacadeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1BC2376D41300B93C9A /* FacadeClient.swift */; };
 		EB99B1BF2376D41E00B93C9A /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1BE2376D41E00B93C9A /* Parser.swift */; };
 		EB99B1CE2376D62200B93C9A /* ModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1CD2376D62200B93C9A /* ModelBase.swift */; };
+		EB99B1DC2376DB2B00B93C9A /* CommandBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1DB2376DB2B00B93C9A /* CommandBase.swift */; };
+		EB99B1DE2376DB4300B93C9A /* CommandCallbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1DD2376DB4300B93C9A /* CommandCallbacks.swift */; };
+		EB99B1E02376DB5A00B93C9A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1DF2376DB5A00B93C9A /* Reachability.swift */; };
+		EB99B1E22376DC5100B93C9A /* Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1E12376DC5100B93C9A /* Execute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		EB99B1BC2376D41300B93C9A /* FacadeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadeClient.swift; sourceTree = "<group>"; };
 		EB99B1BE2376D41E00B93C9A /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		EB99B1CD2376D62200B93C9A /* ModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBase.swift; sourceTree = "<group>"; };
+		EB99B1DB2376DB2B00B93C9A /* CommandBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandBase.swift; sourceTree = "<group>"; };
+		EB99B1DD2376DB4300B93C9A /* CommandCallbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandCallbacks.swift; sourceTree = "<group>"; };
+		EB99B1DF2376DB5A00B93C9A /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		EB99B1E12376DC5100B93C9A /* Execute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Execute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +62,12 @@
 		EB99B1B02376D35900B93C9A /* BaseLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				EB99B1DA2376DB0E00B93C9A /* Command */,
 				EB99B1CC2376D61300B93C9A /* Model */,
 				EB99B1B92376D3B700B93C9A /* Facade */,
 				EB99B1B12376D35900B93C9A /* BaseLibrary.h */,
 				EB99B1B22376D35900B93C9A /* Info.plist */,
+				EB99B1E12376DC5100B93C9A /* Execute.swift */,
 			);
 			path = BaseLibrary;
 			sourceTree = "<group>";
@@ -78,6 +88,16 @@
 				EB99B1CD2376D62200B93C9A /* ModelBase.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EB99B1DA2376DB0E00B93C9A /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				EB99B1DB2376DB2B00B93C9A /* CommandBase.swift */,
+				EB99B1DD2376DB4300B93C9A /* CommandCallbacks.swift */,
+				EB99B1DF2376DB5A00B93C9A /* Reachability.swift */,
+			);
+			path = Command;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,10 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB99B1E02376DB5A00B93C9A /* Reachability.swift in Sources */,
 				EB99B1BD2376D41300B93C9A /* FacadeClient.swift in Sources */,
 				EB99B1BB2376D3EE00B93C9A /* FacadeBase.swift in Sources */,
+				EB99B1E22376DC5100B93C9A /* Execute.swift in Sources */,
 				EB99B1CE2376D62200B93C9A /* ModelBase.swift in Sources */,
 				EB99B1BF2376D41E00B93C9A /* Parser.swift in Sources */,
+				EB99B1DE2376DB4300B93C9A /* CommandCallbacks.swift in Sources */,
+				EB99B1DC2376DB2B00B93C9A /* CommandBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +326,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BaseLibrary/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +353,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BaseLibrary/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
