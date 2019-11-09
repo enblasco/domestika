@@ -19,7 +19,33 @@
 		EB99B19D2376C58200B93C9A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB99B19C2376C58200B93C9A /* Colors.xcassets */; };
 		EB99B19F2376C7BF00B93C9A /* UIView+fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B19E2376C7BF00B93C9A /* UIView+fade.swift */; };
 		EB99B1A22376D01000B93C9A /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1A12376D01000B93C9A /* NavigationViewController.swift */; };
+		EB99B1C82376D57F00B93C9A /* BaseLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB99B1C72376D57500B93C9A /* BaseLibrary.framework */; };
+		EB99B1C92376D57F00B93C9A /* BaseLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB99B1C72376D57500B93C9A /* BaseLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB99B1C62376D57500B93C9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB99B1C22376D57500B93C9A /* BaseLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB99B1AE2376D35900B93C9A;
+			remoteInfo = BaseLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EB99B1CA2376D58000B93C9A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EB99B1C92376D57F00B93C9A /* BaseLibrary.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EB99B17A2376BAF600B93C9A /* Domestika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Domestika.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +62,7 @@
 		EB99B19C2376C58200B93C9A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EB99B19E2376C7BF00B93C9A /* UIView+fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fade.swift"; sourceTree = "<group>"; };
 		EB99B1A12376D01000B93C9A /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		EB99B1C22376D57500B93C9A /* BaseLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BaseLibrary.xcodeproj; path = ../BaseLibrary/BaseLibrary.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB99B1C82376D57F00B93C9A /* BaseLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +82,7 @@
 			children = (
 				EB99B17C2376BAF600B93C9A /* Domestika */,
 				EB99B17B2376BAF600B93C9A /* Products */,
+				EB99B1C12376D57500B93C9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +97,7 @@
 		EB99B17C2376BAF600B93C9A /* Domestika */ = {
 			isa = PBXGroup;
 			children = (
+				EB99B1CF2376D6C300B93C9A /* Model */,
 				EB99B1A02376CFE600B93C9A /* NavigationController */,
 				EB99B1992376BF7300B93C9A /* Extensions */,
 				EB99B1942376BC6900B93C9A /* Resources */,
@@ -117,6 +147,29 @@
 			path = NavigationController;
 			sourceTree = "<group>";
 		};
+		EB99B1C12376D57500B93C9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB99B1C22376D57500B93C9A /* BaseLibrary.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB99B1C32376D57500B93C9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB99B1C72376D57500B93C9A /* BaseLibrary.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB99B1CF2376D6C300B93C9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,6 +180,7 @@
 				EB99B1762376BAF600B93C9A /* Sources */,
 				EB99B1772376BAF600B93C9A /* Frameworks */,
 				EB99B1782376BAF600B93C9A /* Resources */,
+				EB99B1CA2376D58000B93C9A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,12 +217,28 @@
 			mainGroup = EB99B1712376BAF600B93C9A;
 			productRefGroup = EB99B17B2376BAF600B93C9A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EB99B1C32376D57500B93C9A /* Products */;
+					ProjectRef = EB99B1C22376D57500B93C9A /* BaseLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EB99B1792376BAF600B93C9A /* Domestika */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EB99B1C72376D57500B93C9A /* BaseLibrary.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BaseLibrary.framework;
+			remoteRef = EB99B1C62376D57500B93C9A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EB99B1782376BAF600B93C9A /* Resources */ = {
