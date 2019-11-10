@@ -1,16 +1,16 @@
 //
-//  UIButton+cornerRadius.swift
+//  UIView+cornerRadius.swift
 //  Domestika
 //
-//  Created by Enrique Blasco Blanquer on 09/11/2019.
+//  Created by Enrique Blasco Blanquer on 10/11/2019.
 //  Copyright © 2019 eblasco. All rights reserved.
 //
 
 import UIKit
 
-@IBDesignable extension UIButton {
+@IBDesignable extension UIView {
 
-    @IBInspectable var borderWidthView: CGFloat {
+    @IBInspectable var borderWidth: CGFloat {
         set {
             layer.borderWidth = newValue
         }
@@ -19,7 +19,7 @@ import UIKit
         }
     }
 
-    @IBInspectable var cornerRadiusView: CGFloat {
+    @IBInspectable var cornerRadius: CGFloat {
         set {
             layer.cornerRadius = newValue
         }
@@ -28,7 +28,7 @@ import UIKit
         }
     }
 
-    @IBInspectable var borderColorView: UIColor? {
+    @IBInspectable var borderColor: UIColor? {
         set {
             guard let uiColor = newValue else { return }
             layer.borderColor = uiColor.cgColor

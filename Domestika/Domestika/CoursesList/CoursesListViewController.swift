@@ -9,8 +9,12 @@
 import UIKit
 import BaseLibrary
 
-class CoursesListViewController: MyView {
+class CoursesListViewController: MyView , UICollectionViewDelegate, UICollectionViewDataSource{
     
+    
+    
+    @IBOutlet weak var lblSelectedCourses: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var heightCoursesPage: NSLayoutConstraint!
     
@@ -25,6 +29,8 @@ class CoursesListViewController: MyView {
     }
     
     private func setViews(){
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
         self.heightCoursesPage.constant = (PERCENTOFTOPPAGE * UIScreen.main.bounds.height) / 100
         self.navigationController?.setNavigationBarHidden(true, animated: true) //hidde navigationbar
         self.progress = UIActivityIndicatorView(style: .large)
@@ -33,7 +39,6 @@ class CoursesListViewController: MyView {
         self.progress?.startAnimating()
         self.view.addSubview(progress!)
     }
-    
 
     func getInfo(){
         let cmd = CmdGetCourses()
@@ -45,6 +50,8 @@ class CoursesListViewController: MyView {
                 self.showProgress(false)
                 self.courses = cmd.courses!
                 self.performSegue(withIdentifier: "toCoursesPage", sender: nil)
+                self.collectionView.reloadData()
+                self.lblSelectedCourses.isHidden = false
         },
             handlerRetry: {
                 self.getInfo()
@@ -56,6 +63,29 @@ class CoursesListViewController: MyView {
         self.execute(cmd)
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if self.courses!.count > NUMCURSESINTOP {
+            return Array(self.courses![NUMCURSESINTOP...self.courses!.count-1]).count
+        }
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "courseCell", for: indexPath) as! CourseCollectionViewCell
+        cell.bottomHeight.constant = (cell.bounds.height * 50.0)/100
+        cell.viewContainer.dropShadow()
+        let course = courses![NUMCURSESINTOP + indexPath.row]
+        cell.imgCourse.downloaded(from: course.thumbnailUrl!)
+        cell.titleCourse.text = course.title!
+       // cell.teacherCourse.text = course.teacher["name"]!
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
+  
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let ident = segue.identifier ?? ""
         if ident == "toCoursesPage" {
@@ -63,8 +93,6 @@ class CoursesListViewController: MyView {
             
             coursesPage.coursesList = Array(self.courses![0...NUMCURSESINTOP-1])
         }
-
-        
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
@@ -79,4 +107,12 @@ class CoursesListViewController: MyView {
     }
     
     
+}
+extension CoursesListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        print("\(indexPath.row)")
+        return CGSize(width: (78.0 * UIScreen.main.bounds.width) / 100, height: collectionView.bounds.height)
+    }
+    
+
 }

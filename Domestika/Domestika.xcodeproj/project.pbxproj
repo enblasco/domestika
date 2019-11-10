@@ -31,6 +31,9 @@
 		EB99B1C92376D57F00B93C9A /* BaseLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB99B1C72376D57500B93C9A /* BaseLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB99B1D42376D7BD00B93C9A /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1D32376D7BD00B93C9A /* Course.swift */; };
 		EB99B1D92376DAB900B93C9A /* CoursesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B1D82376DAB900B93C9A /* CoursesListViewController.swift */; };
+		EBF95C4D23787056001E854C /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF95C4C23787056001E854C /* CourseCollectionViewCell.swift */; };
+		EBF95C502378752D001E854C /* UIView+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF95C4F2378752D001E854C /* UIView+cornerRadius.swift */; };
+		EBF95C532378822D001E854C /* UIView+dropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF95C522378822D001E854C /* UIView+dropShadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		EB99B1C22376D57500B93C9A /* BaseLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BaseLibrary.xcodeproj; path = ../BaseLibrary/BaseLibrary.xcodeproj; sourceTree = "<group>"; };
 		EB99B1D32376D7BD00B93C9A /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		EB99B1D82376DAB900B93C9A /* CoursesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesListViewController.swift; sourceTree = "<group>"; };
+		EBF95C4C23787056001E854C /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
+		EBF95C4F2378752D001E854C /* UIView+cornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+cornerRadius.swift"; sourceTree = "<group>"; };
+		EBF95C522378822D001E854C /* UIView+dropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+dropShadow.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +192,8 @@
 				EB99B19E2376C7BF00B93C9A /* UIView+fade.swift */,
 				EB6E135723780980002FEF40 /* UIPageViewController+goToNextPage.swift */,
 				EB6E135A23781DE5002FEF40 /* UIImageView+downloaded.swift */,
+				EBF95C4F2378752D001E854C /* UIView+cornerRadius.swift */,
+				EBF95C522378822D001E854C /* UIView+dropShadow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +236,7 @@
 				EB99B1D82376DAB900B93C9A /* CoursesListViewController.swift */,
 				EB6E134F2377E74A002FEF40 /* CoursesPageViewController.swift */,
 				EB6E13522377F986002FEF40 /* PaginatedCoursesViewController.swift */,
+				EBF95C4C23787056001E854C /* CourseCollectionViewCell.swift */,
 			);
 			path = CoursesList;
 			sourceTree = "<group>";
@@ -323,7 +332,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB99B1D42376D7BD00B93C9A /* Course.swift in Sources */,
+				EBF95C532378822D001E854C /* UIView+dropShadow.swift in Sources */,
 				EB99B1932376BBF700B93C9A /* LoginViewController.swift in Sources */,
+				EBF95C502378752D001E854C /* UIView+cornerRadius.swift in Sources */,
 				EB6E135B23781DE5002FEF40 /* UIImageView+downloaded.swift in Sources */,
 				EB99B17E2376BAF600B93C9A /* AppDelegate.swift in Sources */,
 				EB6E134C237706FF002FEF40 /* FacadeTrailers.swift in Sources */,
@@ -337,6 +348,7 @@
 				EB6E13502377E74A002FEF40 /* CoursesPageViewController.swift in Sources */,
 				EB6E135823780980002FEF40 /* UIPageViewController+goToNextPage.swift in Sources */,
 				EB6E134E237761DA002FEF40 /* FacadeDomestika.swift in Sources */,
+				EBF95C4D23787056001E854C /* CourseCollectionViewCell.swift in Sources */,
 				EB6E13422376E51A002FEF40 /* CmdGetCourses.swift in Sources */,
 				EB99B1802376BAF600B93C9A /* SceneDelegate.swift in Sources */,
 			);
