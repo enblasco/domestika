@@ -1,5 +1,5 @@
 //
-//  FacadeCourse.swift
+//  FacadeDomestika.swift
 //  Domestika
 //
 //  Created by Enrique Blasco Blanquer on 09/11/2019.
@@ -9,8 +9,8 @@
 import UIKit
 import BaseLibrary
 
-class FacadeCourse: FacadeClient, URLSessionDelegate {
-    static let instance = FacadeCourse()
+class FacadeDomestika: FacadeClient, URLSessionDelegate {
+    static let instance = FacadeDomestika()
     let HOST = "https://my-json-server.typicode.com/emilioicai/"
     
     override func WriteResponseToStream(_ facade: String, command: String, argsMessage: String!, datos: inout AnyObject?) throws{

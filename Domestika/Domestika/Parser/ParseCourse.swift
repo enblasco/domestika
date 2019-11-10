@@ -8,19 +8,17 @@
 
 import UIKit
 import BaseLibrary
+
 class ParseCourse: Parser {
+    
     typealias T =  Array<Course>
     
     func parse(_ jsonObject: AnyObject) -> Array<Course> {
-        
         let array = jsonObject as! NSArray
-        
         var courses: Array<Course> = []
-        
         for a in array{
             courses.append(parseCourse(a as! NSDictionary))
         }
-        
         return courses
     }
     

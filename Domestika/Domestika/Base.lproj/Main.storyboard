@@ -152,6 +152,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eP4-jo-rdJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="enX-v7-PYd" kind="relationship" relationship="rootViewController" id="cPT-gw-LEw"/>
@@ -168,17 +169,126 @@
                     <view key="view" contentMode="scaleToFill" id="ZQl-hW-6Cl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJG-b4-hPR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="259"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="259" id="lxB-cs-TSJ"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="cGo-Bn-cFi" kind="embed" identifier="toCoursesPage" id="hVi-pJ-cTF"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="ZJG-b4-hPR" firstAttribute="top" secondItem="ZQl-hW-6Cl" secondAttribute="top" id="Ahd-Tk-SzX"/>
+                            <constraint firstItem="ZJG-b4-hPR" firstAttribute="trailing" secondItem="2eI-pA-qsZ" secondAttribute="trailing" id="VfY-xK-URC"/>
+                            <constraint firstItem="ZJG-b4-hPR" firstAttribute="leading" secondItem="2eI-pA-qsZ" secondAttribute="leading" id="lvV-ps-faU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2eI-pA-qsZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="16E-R5-4SV"/>
+                    <connections>
+                        <outlet property="containerView" destination="ZJG-b4-hPR" id="F3X-yK-vBh"/>
+                        <outlet property="heightCoursesPage" destination="lxB-cs-TSJ" id="jes-gx-9KQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybL-PB-4Tv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="163"/>
+            <point key="canvasLocation" x="1124.6376811594205" y="162.22826086956522"/>
+        </scene>
+        <!--Courses Page View Controller-->
+        <scene sceneID="lmA-op-JaS">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="cGo-Bn-cFi" customClass="CoursesPageViewController" customModule="Domestika" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djh-jP-X98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="-32"/>
+        </scene>
+        <!--Paginated Courses View Controller-->
+        <scene sceneID="k0F-X5-C7z">
+            <objects>
+                <viewController storyboardIdentifier="paginatedCourse" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f9v-7T-U05" customClass="PaginatedCoursesViewController" customModule="Domestika" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8eY-ZQ-jIR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadphoto" translatesAutoresizingMaskIntoConstraints="NO" id="Vmi-YH-irO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUS-X9-OGk" customClass="GradientView" customModule="Domestika" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="577" width="414" height="159"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estampación manual con sellos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJn-Ly-E2x">
+                                        <rect key="frame" x="53" y="28" width="308" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfB-AQ-81a">
+                                        <rect key="frame" x="152.66666666666666" y="91" width="108.99999999999997" height="33"/>
+                                        <color key="backgroundColor" name="Background"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="MpZ-s9-Qjs"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="SHF-N5-7MD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Ver curso">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="YfB-AQ-81a" firstAttribute="top" secondItem="EJn-Ly-E2x" secondAttribute="bottom" constant="8" id="60N-Sa-zrT"/>
+                                    <constraint firstItem="YfB-AQ-81a" firstAttribute="centerX" secondItem="dUS-X9-OGk" secondAttribute="centerX" id="NNB-52-lfK"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="EJn-Ly-E2x" secondAttribute="trailing" constant="45" id="TwY-Rd-lFs"/>
+                                    <constraint firstAttribute="bottom" secondItem="YfB-AQ-81a" secondAttribute="bottom" constant="35" id="kIR-wA-VYt"/>
+                                    <constraint firstAttribute="height" constant="159" id="lWg-be-Y7m"/>
+                                    <constraint firstItem="EJn-Ly-E2x" firstAttribute="leading" secondItem="dUS-X9-OGk" secondAttribute="leadingMargin" constant="45" id="zcU-iT-D7U"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.38678153479718314" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="Vmi-YH-irO" firstAttribute="trailing" secondItem="kYH-9p-lQy" secondAttribute="trailing" id="F8S-1o-UR6"/>
+                            <constraint firstItem="dUS-X9-OGk" firstAttribute="leading" secondItem="kYH-9p-lQy" secondAttribute="leading" id="FWm-gy-KHe"/>
+                            <constraint firstItem="Vmi-YH-irO" firstAttribute="bottom" secondItem="kYH-9p-lQy" secondAttribute="bottom" id="LDl-Bp-zwx"/>
+                            <constraint firstItem="dUS-X9-OGk" firstAttribute="trailing" secondItem="kYH-9p-lQy" secondAttribute="trailing" id="ow6-B5-AGM"/>
+                            <constraint firstItem="Vmi-YH-irO" firstAttribute="top" secondItem="8eY-ZQ-jIR" secondAttribute="top" id="xas-Dr-evZ"/>
+                            <constraint firstItem="Vmi-YH-irO" firstAttribute="leading" secondItem="kYH-9p-lQy" secondAttribute="leading" id="z5E-9V-UPO"/>
+                            <constraint firstItem="dUS-X9-OGk" firstAttribute="bottom" secondItem="kYH-9p-lQy" secondAttribute="bottom" id="z6y-1g-7Yv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kYH-9p-lQy"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgCourse" destination="Vmi-YH-irO" id="B1q-SP-jWQ"/>
+                        <outlet property="lblCourse" destination="EJn-Ly-E2x" id="4HS-Ct-X6r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6r-d1-HeV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2476.811594202899" y="161.41304347826087"/>
         </scene>
     </scenes>
     <resources>
+        <image name="loadphoto" width="379" height="289"/>
         <image name="textlogo" width="250" height="50"/>
         <namedColor name="Background">
             <color red="0.97200000286102295" green="0.97299998998641968" blue="0.97200000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -11,7 +11,6 @@ import UIKit
 open class MyView: UIViewController {
     
     open var progress: UIActivityIndicatorView?
-    open var contenedor: UIView?
     open var executer: Execute?
     
     open override func viewDidLoad() {
@@ -29,7 +28,6 @@ open class MyView: UIViewController {
     
     open func showProgress(_ show: Bool) {
         showProgressBar(show)
-        showContenedor(show)
     }
     
     open func showProgressBar(_ show: Bool)
@@ -51,16 +49,7 @@ open class MyView: UIViewController {
         }
         
     }
-    
-    open func showContenedor(_ show: Bool)
-    {
-        if(contenedor != nil)
-        {
-            contenedor!.isHidden = show
-        }
-    }
-    
-    
+
     open func createView(){
         showProgress(false)
         setTitles()

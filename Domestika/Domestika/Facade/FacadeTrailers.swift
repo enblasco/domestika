@@ -16,7 +16,7 @@ class FacadeTrailers: FacadeBase {
     override init() {
         super.init()
         facadeName = "trailers"
-        facade = FacadeCourse.instance
+        facade = FacadeDomestika.instance
     }
     
     func getCourses() throws -> Array<Course>

@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB6E133D2376E000002FEF40 /* FacadeCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E133C2376E000002FEF40 /* FacadeCourse.swift */; };
 		EB6E13402376E0CA002FEF40 /* ParseCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E133F2376E0CA002FEF40 /* ParseCourse.swift */; };
 		EB6E13422376E51A002FEF40 /* CmdGetCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E13412376E51A002FEF40 /* CmdGetCourses.swift */; };
 		EB6E134C237706FF002FEF40 /* FacadeTrailers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E134B237706FF002FEF40 /* FacadeTrailers.swift */; };
+		EB6E134E237761DA002FEF40 /* FacadeDomestika.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E134D237761DA002FEF40 /* FacadeDomestika.swift */; };
+		EB6E13502377E74A002FEF40 /* CoursesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E134F2377E74A002FEF40 /* CoursesPageViewController.swift */; };
+		EB6E13532377F986002FEF40 /* PaginatedCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E13522377F986002FEF40 /* PaginatedCoursesViewController.swift */; };
+		EB6E135823780980002FEF40 /* UIPageViewController+goToNextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E135723780980002FEF40 /* UIPageViewController+goToNextPage.swift */; };
+		EB6E135B23781DE5002FEF40 /* UIImageView+downloaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E135A23781DE5002FEF40 /* UIImageView+downloaded.swift */; };
 		EB99B17E2376BAF600B93C9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B17D2376BAF600B93C9A /* AppDelegate.swift */; };
 		EB99B1802376BAF600B93C9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B17F2376BAF600B93C9A /* SceneDelegate.swift */; };
 		EB99B1852376BAF600B93C9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB99B1832376BAF600B93C9A /* Main.storyboard */; };
@@ -54,10 +58,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EB6E133C2376E000002FEF40 /* FacadeCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadeCourse.swift; sourceTree = "<group>"; };
 		EB6E133F2376E0CA002FEF40 /* ParseCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCourse.swift; sourceTree = "<group>"; };
 		EB6E13412376E51A002FEF40 /* CmdGetCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmdGetCourses.swift; sourceTree = "<group>"; };
 		EB6E134B237706FF002FEF40 /* FacadeTrailers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadeTrailers.swift; sourceTree = "<group>"; };
+		EB6E134D237761DA002FEF40 /* FacadeDomestika.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadeDomestika.swift; sourceTree = "<group>"; };
+		EB6E134F2377E74A002FEF40 /* CoursesPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesPageViewController.swift; sourceTree = "<group>"; };
+		EB6E13522377F986002FEF40 /* PaginatedCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedCoursesViewController.swift; sourceTree = "<group>"; };
+		EB6E135723780980002FEF40 /* UIPageViewController+goToNextPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPageViewController+goToNextPage.swift"; sourceTree = "<group>"; };
+		EB6E135A23781DE5002FEF40 /* UIImageView+downloaded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+downloaded.swift"; sourceTree = "<group>"; };
 		EB99B17A2376BAF600B93C9A /* Domestika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Domestika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB99B17D2376BAF600B93C9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB99B17F2376BAF600B93C9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,8 +108,8 @@
 		EB6E13392376DE9F002FEF40 /* Facade */ = {
 			isa = PBXGroup;
 			children = (
-				EB6E133C2376E000002FEF40 /* FacadeCourse.swift */,
 				EB6E134B237706FF002FEF40 /* FacadeTrailers.swift */,
+				EB6E134D237761DA002FEF40 /* FacadeDomestika.swift */,
 			);
 			path = Facade;
 			sourceTree = "<group>";
@@ -176,6 +184,8 @@
 			children = (
 				EB99B19A2376BF9300B93C9A /* UIButton+cornerRadius.swift */,
 				EB99B19E2376C7BF00B93C9A /* UIView+fade.swift */,
+				EB6E135723780980002FEF40 /* UIPageViewController+goToNextPage.swift */,
+				EB6E135A23781DE5002FEF40 /* UIImageView+downloaded.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				EB99B1D82376DAB900B93C9A /* CoursesListViewController.swift */,
+				EB6E134F2377E74A002FEF40 /* CoursesPageViewController.swift */,
+				EB6E13522377F986002FEF40 /* PaginatedCoursesViewController.swift */,
 			);
 			path = CoursesList;
 			sourceTree = "<group>";
@@ -312,15 +324,19 @@
 			files = (
 				EB99B1D42376D7BD00B93C9A /* Course.swift in Sources */,
 				EB99B1932376BBF700B93C9A /* LoginViewController.swift in Sources */,
+				EB6E135B23781DE5002FEF40 /* UIImageView+downloaded.swift in Sources */,
 				EB99B17E2376BAF600B93C9A /* AppDelegate.swift in Sources */,
 				EB6E134C237706FF002FEF40 /* FacadeTrailers.swift in Sources */,
 				EB99B19F2376C7BF00B93C9A /* UIView+fade.swift in Sources */,
 				EB6E13402376E0CA002FEF40 /* ParseCourse.swift in Sources */,
+				EB6E13532377F986002FEF40 /* PaginatedCoursesViewController.swift in Sources */,
 				EB99B19B2376BF9300B93C9A /* UIButton+cornerRadius.swift in Sources */,
 				EB99B1962376BC8E00B93C9A /* GradientView.swift in Sources */,
 				EB99B1D92376DAB900B93C9A /* CoursesListViewController.swift in Sources */,
-				EB6E133D2376E000002FEF40 /* FacadeCourse.swift in Sources */,
 				EB99B1A22376D01000B93C9A /* NavigationViewController.swift in Sources */,
+				EB6E13502377E74A002FEF40 /* CoursesPageViewController.swift in Sources */,
+				EB6E135823780980002FEF40 /* UIPageViewController+goToNextPage.swift in Sources */,
+				EB6E134E237761DA002FEF40 /* FacadeDomestika.swift in Sources */,
 				EB6E13422376E51A002FEF40 /* CmdGetCourses.swift in Sources */,
 				EB99B1802376BAF600B93C9A /* SceneDelegate.swift in Sources */,
 			);
