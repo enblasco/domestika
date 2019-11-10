@@ -80,7 +80,12 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         let course = courses![NUMCURSESINTOP + indexPath.row]
         cell.imgCourse.downloaded(from: course.thumbnailUrl!)
         cell.titleCourse.text = course.title!
-       // cell.teacherCourse.text = course.teacher["name"]!
+        if let teacher = course.teacher["name"]{
+            cell.teacherCourse.text =  teacher.utf8DecodedString().replacingOccurrences(of: "\"", with: "")
+        }else{
+            cell.teacherCourse.text = ""
+        }
+       
         return cell
     }
     
