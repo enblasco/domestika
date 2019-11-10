@@ -26,14 +26,13 @@ class PaginatedCoursesViewController: UIViewController {
     @IBAction func goToCourse(_ sender: Any) {
         setBackButton()
         let courseView:CourseDetailViewController = self.storyboard?.instantiateViewController(identifier: "courseDetail") as! CourseDetailViewController
+        courseView.course = self.course
         self.navigationController?.pushViewController(courseView, animated: true)
     }
     
     private func setBackButton(){
         let backImage = UIImage(named: "backrow")
-        
         self.navigationController?.navigationBar.backIndicatorImage = backImage
-        
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
 
     }

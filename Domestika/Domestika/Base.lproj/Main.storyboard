@@ -373,13 +373,31 @@
                     <view key="view" contentMode="scaleToFill" id="d0F-2h-lZH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HS3-H0-Xcz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="209"/>
+                                <color key="backgroundColor" name="Secundary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="209" id="g0M-jC-bw4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HS3-H0-Xcz" firstAttribute="top" secondItem="iaU-B2-Cml" secondAttribute="top" id="1WQ-WE-59G"/>
+                            <constraint firstItem="HS3-H0-Xcz" firstAttribute="leading" secondItem="iaU-B2-Cml" secondAttribute="leading" id="DXL-sd-PJf"/>
+                            <constraint firstItem="HS3-H0-Xcz" firstAttribute="trailing" secondItem="iaU-B2-Cml" secondAttribute="trailing" id="fRi-6O-Fzz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iaU-B2-Cml"/>
                     </view>
+                    <connections>
+                        <outlet property="videoHeight" destination="g0M-jC-bw4" id="9dq-Ye-S6N"/>
+                        <outlet property="videoView" destination="HS3-H0-Xcz" id="7bI-6b-nwy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yxy-1L-ECE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1949" y="445"/>
+            <point key="canvasLocation" x="1947.826086956522" y="444.29347826086962"/>
         </scene>
         <!--Courses Page View Controller-->
         <scene sceneID="lmA-op-JaS">

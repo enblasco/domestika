@@ -35,6 +35,7 @@
 		EBF95C502378752D001E854C /* UIView+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF95C4F2378752D001E854C /* UIView+cornerRadius.swift */; };
 		EBF95C532378822D001E854C /* UIView+dropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF95C522378822D001E854C /* UIView+dropShadow.swift */; };
 		EBF95C5723788815001E854C /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF95C5623788815001E854C /* CourseDetailViewController.swift */; };
+		EBF95C5C23789D1F001E854C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF95C5823789C56001E854C /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		EBF95C4F2378752D001E854C /* UIView+cornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+cornerRadius.swift"; sourceTree = "<group>"; };
 		EBF95C522378822D001E854C /* UIView+dropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+dropShadow.swift"; sourceTree = "<group>"; };
 		EBF95C5623788815001E854C /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
+		EBF95C5823789C56001E854C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF95C5C23789D1F001E854C /* AVFoundation.framework in Frameworks */,
 				EB99B1C82376D57F00B93C9A /* BaseLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +215,7 @@
 		EB99B1C12376D57500B93C9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBF95C5823789C56001E854C /* AVFoundation.framework */,
 				EB99B1C22376D57500B93C9A /* BaseLibrary.xcodeproj */,
 			);
 			name = Frameworks;
