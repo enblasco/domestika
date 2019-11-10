@@ -9,7 +9,7 @@
 import UIKit
 
 class PaginatedCoursesViewController: UIViewController {
-
+    
     @IBOutlet weak var imgCourse: UIImageView!
     @IBOutlet weak var lblCourse: UILabel!
     var course:Course?
@@ -23,5 +23,21 @@ class PaginatedCoursesViewController: UIViewController {
         lblCourse.text = course?.title!
         imgCourse.downloaded(from: (course?.thumbnailUrl!)!)
     }
+    @IBAction func goToCourse(_ sender: Any) {
+        setBackButton()
+        let courseView:CourseDetailViewController = self.storyboard?.instantiateViewController(identifier: "courseDetail") as! CourseDetailViewController
+        self.navigationController?.pushViewController(courseView, animated: true)
+    }
+    
+    private func setBackButton(){
+        let backImage = UIImage(named: "backrow")
+        
+        self.navigationController?.navigationBar.backIndicatorImage = backImage
+        
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
 
+    }
+    
+    
+    
 }

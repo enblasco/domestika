@@ -34,6 +34,7 @@
 		EBF95C4D23787056001E854C /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF95C4C23787056001E854C /* CourseCollectionViewCell.swift */; };
 		EBF95C502378752D001E854C /* UIView+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF95C4F2378752D001E854C /* UIView+cornerRadius.swift */; };
 		EBF95C532378822D001E854C /* UIView+dropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF95C522378822D001E854C /* UIView+dropShadow.swift */; };
+		EBF95C5723788815001E854C /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF95C5623788815001E854C /* CourseDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		EBF95C4C23787056001E854C /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
 		EBF95C4F2378752D001E854C /* UIView+cornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+cornerRadius.swift"; sourceTree = "<group>"; };
 		EBF95C522378822D001E854C /* UIView+dropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+dropShadow.swift"; sourceTree = "<group>"; };
+		EBF95C5623788815001E854C /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,15 +150,16 @@
 		EB99B17C2376BAF600B93C9A /* Domestika */ = {
 			isa = PBXGroup;
 			children = (
+				EB99B1912376BBBF00B93C9A /* Login */,
+				EB99B1D62376DA9C00B93C9A /* CoursesList */,
+				EBF95C55237887D4001E854C /* CourseDetail */,
+				EB99B1A02376CFE600B93C9A /* NavigationController */,
+				EB99B1CF2376D6C300B93C9A /* Model */,
 				EB6E133E2376E0A1002FEF40 /* Parser */,
 				EB6E13392376DE9F002FEF40 /* Facade */,
 				EB6E13372376DE51002FEF40 /* Command */,
-				EB99B1D62376DA9C00B93C9A /* CoursesList */,
-				EB99B1CF2376D6C300B93C9A /* Model */,
-				EB99B1A02376CFE600B93C9A /* NavigationController */,
 				EB99B1992376BF7300B93C9A /* Extensions */,
 				EB99B1942376BC6900B93C9A /* Resources */,
-				EB99B1912376BBBF00B93C9A /* Login */,
 				EB99B17D2376BAF600B93C9A /* AppDelegate.swift */,
 				EB99B17F2376BAF600B93C9A /* SceneDelegate.swift */,
 				EB99B1832376BAF600B93C9A /* Main.storyboard */,
@@ -239,6 +242,14 @@
 				EBF95C4C23787056001E854C /* CourseCollectionViewCell.swift */,
 			);
 			path = CoursesList;
+			sourceTree = "<group>";
+		};
+		EBF95C55237887D4001E854C /* CourseDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EBF95C5623788815001E854C /* CourseDetailViewController.swift */,
+			);
+			path = CourseDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +355,7 @@
 				EB99B19B2376BF9300B93C9A /* UIButton+cornerRadius.swift in Sources */,
 				EB99B1962376BC8E00B93C9A /* GradientView.swift in Sources */,
 				EB99B1D92376DAB900B93C9A /* CoursesListViewController.swift in Sources */,
+				EBF95C5723788815001E854C /* CourseDetailViewController.swift in Sources */,
 				EB99B1A22376D01000B93C9A /* NavigationViewController.swift in Sources */,
 				EB6E13502377E74A002FEF40 /* CoursesPageViewController.swift in Sources */,
 				EB6E135823780980002FEF40 /* UIPageViewController+goToNextPage.swift in Sources */,

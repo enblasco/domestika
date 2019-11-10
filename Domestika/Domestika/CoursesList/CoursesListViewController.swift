@@ -28,11 +28,14 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         getInfo()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true) //hidde navigationbar
+    }
+    
     private func setViews(){
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.heightCoursesPage.constant = (PERCENTOFTOPPAGE * UIScreen.main.bounds.height) / 100
-        self.navigationController?.setNavigationBarHidden(true, animated: true) //hidde navigationbar
         self.progress = UIActivityIndicatorView(style: .large)
         self.progress?.center = self.view.center
         self.progress?.hidesWhenStopped = false

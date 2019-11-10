@@ -153,6 +153,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eP4-jo-rdJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
@@ -252,9 +253,9 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="O81-M8-jaB"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <state key="normal" title="Ver curso">
-                                                                        <color key="titleColor" name="Secundary"/>
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>
                                                                 </button>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6M-8J-Y7q">
@@ -365,13 +366,28 @@
             </objects>
             <point key="canvasLocation" x="1124.6376811594205" y="162.22826086956522"/>
         </scene>
+        <!--Course Detail View Controller-->
+        <scene sceneID="H20-C7-Ua2">
+            <objects>
+                <viewController storyboardIdentifier="courseDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c9x-Gj-Lgz" customClass="CourseDetailViewController" customModule="Domestika" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d0F-2h-lZH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="iaU-B2-Cml"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yxy-1L-ECE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949" y="445"/>
+        </scene>
         <!--Courses Page View Controller-->
         <scene sceneID="lmA-op-JaS">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="cGo-Bn-cFi" customClass="CoursesPageViewController" customModule="Domestika" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djh-jP-X98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="-32"/>
+            <point key="canvasLocation" x="1893" y="-533"/>
         </scene>
         <!--Paginated Courses View Controller-->
         <scene sceneID="k0F-X5-C7z">
@@ -405,6 +421,9 @@
                                         <state key="normal" title="Ver curso">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goToCourse:" destination="f9v-7T-U05" eventType="touchUpInside" id="kdg-26-UNm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -451,7 +470,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6r-d1-HeV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2476.811594202899" y="161.41304347826087"/>
+            <point key="canvasLocation" x="2575" y="-339"/>
         </scene>
     </scenes>
     <resources>
