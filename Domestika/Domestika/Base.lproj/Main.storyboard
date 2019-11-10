@@ -376,9 +376,37 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HS3-H0-Xcz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="209"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjs-wZ-ug6">
+                                        <rect key="frame" x="8" y="82.666666666666671" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="n5e-zQ-lw0"/>
+                                            <constraint firstAttribute="height" constant="44" id="nYj-ss-n19"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="rewind"/>
+                                        <connections>
+                                            <action selector="rewindBtn:" destination="c9x-Gj-Lgz" eventType="touchUpInside" id="uA1-G2-K9u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pP-qA-dbq">
+                                        <rect key="frame" x="362" y="82.666666666666671" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="UvA-O0-Vb6"/>
+                                            <constraint firstAttribute="height" constant="44" id="tr5-sR-WN9"/>
+                                        </constraints>
+                                        <state key="normal" image="forward"/>
+                                        <connections>
+                                            <action selector="fastForwardBtn:" destination="c9x-Gj-Lgz" eventType="touchUpInside" id="2Jm-6j-XbA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" name="Secundary"/>
                                 <constraints>
+                                    <constraint firstItem="7pP-qA-dbq" firstAttribute="centerY" secondItem="HS3-H0-Xcz" secondAttribute="centerY" id="2Hy-XQ-NG8"/>
+                                    <constraint firstAttribute="trailing" secondItem="7pP-qA-dbq" secondAttribute="trailing" constant="8" id="PcT-cP-yva"/>
+                                    <constraint firstItem="kjs-wZ-ug6" firstAttribute="centerY" secondItem="HS3-H0-Xcz" secondAttribute="centerY" id="Wll-gq-hcq"/>
                                     <constraint firstAttribute="height" constant="209" id="g0M-jC-bw4"/>
+                                    <constraint firstItem="kjs-wZ-ug6" firstAttribute="leading" secondItem="HS3-H0-Xcz" secondAttribute="leading" constant="8" id="w1W-Ol-1IY"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -391,6 +419,8 @@
                         <viewLayoutGuide key="safeArea" id="iaU-B2-Cml"/>
                     </view>
                     <connections>
+                        <outlet property="forwardBtn" destination="7pP-qA-dbq" id="StK-AM-Zs1"/>
+                        <outlet property="rewindBtn" destination="kjs-wZ-ug6" id="V8T-0c-egZ"/>
                         <outlet property="videoHeight" destination="g0M-jC-bw4" id="9dq-Ye-S6N"/>
                         <outlet property="videoView" destination="HS3-H0-Xcz" id="7bI-6b-nwy"/>
                     </connections>
@@ -492,8 +522,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="forward" width="100" height="100"/>
         <image name="loadphoto" width="379" height="289"/>
         <image name="next" width="13" height="24"/>
+        <image name="rewind" width="100" height="100"/>
         <image name="textlogo" width="250" height="50"/>
         <namedColor name="Background">
             <color red="0.97200000286102295" green="0.97299998998641968" blue="0.97200000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
