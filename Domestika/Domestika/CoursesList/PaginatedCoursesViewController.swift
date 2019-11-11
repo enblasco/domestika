@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ subview of carousel. Show the carousel course
+ */
 class PaginatedCoursesViewController: UIViewController {
     
     @IBOutlet weak var imgCourse: UIImageView!
@@ -23,6 +26,10 @@ class PaginatedCoursesViewController: UIViewController {
         lblCourse.text = course?.title!
         imgCourse.downloaded(from: (course?.thumbnailUrl!)!)
     }
+    
+    /**
+     when press in "ver curso" button
+     */
     @IBAction func goToCourse(_ sender: Any) {
         setBackButton()
         let courseView:CourseDetailViewController = self.storyboard?.instantiateViewController(identifier: "courseDetail") as! CourseDetailViewController
@@ -30,6 +37,9 @@ class PaginatedCoursesViewController: UIViewController {
         self.navigationController?.pushViewController(courseView, animated: true)
     }
     
+    /**
+     configure back button
+     */
     private func setBackButton(){
         let backImage = UIImage(named: "backrow")
         self.navigationController?.navigationBar.backIndicatorImage = backImage
