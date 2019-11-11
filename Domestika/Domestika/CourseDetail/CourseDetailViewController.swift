@@ -10,20 +10,22 @@ import UIKit
 import AVKit
 import AVFoundation
 
-
+/**
+ course detail
+ */
 class CourseDetailViewController: UIViewController {
     
-    @IBOutlet weak var videoView: UIView!
-    @IBOutlet weak var videoHeight: NSLayoutConstraint!
-    @IBOutlet weak var rewindBtn: UIButton!
-    @IBOutlet weak var forwardBtn: UIButton!
+    @IBOutlet weak var videoView: UIView!//video view
+    @IBOutlet weak var videoHeight: NSLayoutConstraint! //video height
+    @IBOutlet weak var rewindBtn: UIButton!//rewind button
+    @IBOutlet weak var forwardBtn: UIButton!//forward button
     
     
-    final let PERCENTOFVIDEO:CGFloat = 27
-    var course:Course?
-    var player : AVPlayer!
-    var playerController:AVPlayerViewController?
-    let seekDuration: Float64 = 10
+    final let PERCENTOFVIDEO:CGFloat = 27 //constant to determine the percent of video view in relation of the screen
+    var course:Course? //course object
+    var player : AVPlayer! //player
+    var playerController:AVPlayerViewController? //playercontroller
+    let seekDuration: Float64 = 10 //seek duration in seconds
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,31 +33,48 @@ class CourseDetailViewController: UIViewController {
         playVideo()
     }
     
-    
+    /**
+     configure navigation controller.
+     */
     private func setViews(){
-        self.navigationController?.setNavigationBarHidden(false, animated: true) //show navigationbar
+        //show navigationbar
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        //hidde navigationbar shadow
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
         
+        //add shared button
         let shareButton =   UIBarButtonItem(image: UIImage(named: "share"), style: .plain, target: self, action: #selector(share))
         self.navigationItem.rightBarButtonItem = shareButton
         
+        //video height
         self.videoHeight.constant = (PERCENTOFVIDEO * UIScreen.main.bounds.height) / 100
     }
     
+    /**
+     insert video in view and play
+     */
     private func playVideo(){
+        //instance player from trailer url
         player = AVPlayer(url: URL(string: self.course!.trailerUrl!)!)
+        //instance playercontroller
         playerController = AVPlayerViewController()
         playerController!.player = player
         playerController!.view.frame = self.videoView.frame
+        //add video in view container
         self.videoView.addSubview(playerController!.view)
         self.addChild(playerController!)
+        //play
         player.play()
+        //add rewind and forward buttons
         videoView.bringSubviewToFront(rewindBtn)
         videoView.bringSubviewToFront(forwardBtn)
     }
     
+    /**
+     forward action
+     */
     @IBAction func fastForwardBtn(_ sender: UIButton) {
         
         if player == nil { return }
@@ -73,6 +92,9 @@ class CourseDetailViewController: UIViewController {
         
     }
     
+    /**
+     rewind action
+     */
     @IBAction func rewindBtn(_ sender: UIButton) {
         
         if player == nil
@@ -95,6 +117,9 @@ class CourseDetailViewController: UIViewController {
         
     }
     
+    /**
+     The rest of the information is shown in an embedded view. We send the info to the table view
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let ident = segue.identifier ?? ""
         if ident == "courseInfo" {

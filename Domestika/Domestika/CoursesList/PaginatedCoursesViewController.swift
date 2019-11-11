@@ -44,7 +44,7 @@ class PaginatedCoursesViewController: UIViewController {
         let backImage = UIImage(named: "backrow")
         self.navigationController?.navigationBar.backIndicatorImage = backImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
-
+        
     }
     
     

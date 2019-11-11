@@ -8,23 +8,23 @@
 
 import UIKit
 
+/**
+ detail course info
+ */
 class CourseInfoTableViewController: UITableViewController {
     
-    @IBOutlet weak var titleCourse: UILabel!
-    @IBOutlet weak var descriptionCourse: UILabel!
-    @IBOutlet weak var teacherName: UILabel!
-    @IBOutlet weak var city: UILabel!
-    @IBOutlet weak var teacherImg: UIImageView!
-    @IBOutlet weak var likeTxt: UILabel!
-    @IBOutlet weak var videoTxt: UILabel!
-    @IBOutlet weak var userTxt: UILabel!
-    @IBOutlet weak var audioTxt: UILabel!
-    @IBOutlet weak var langTxt: UILabel!
+    @IBOutlet weak var titleCourse: UILabel! //title
+    @IBOutlet weak var descriptionCourse: UILabel! //description
+    @IBOutlet weak var teacherName: UILabel! //teacher name
+    @IBOutlet weak var city: UILabel! //city
+    @IBOutlet weak var teacherImg: UIImageView! //teaccher img
+    @IBOutlet weak var likeTxt: UILabel! //positive reviews
+    @IBOutlet weak var videoTxt: UILabel! //lessons number
+    @IBOutlet weak var userTxt: UILabel! //students
+    @IBOutlet weak var audioTxt: UILabel! //audio
+    @IBOutlet weak var langTxt: UILabel! //subtitles
     
-    
-    
-    
-    var course:Course?
+    var course:Course? //course object
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,14 +85,5 @@ class CourseInfoTableViewController: UITableViewController {
         return 7
     }
     
-    /*
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     */
     
 }
