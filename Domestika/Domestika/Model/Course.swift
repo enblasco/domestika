@@ -21,5 +21,6 @@ class Course: ModelBase{
     @objc var audio:String? = ""
     @objc var subtitles:Array<String>? = []
     @objc var teacher: Dictionary<String,String> = Dictionary()
+    @objc var reviews: Dictionary<String,String> = Dictionary()
     
 }

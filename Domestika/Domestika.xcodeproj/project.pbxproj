@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EB2A3A462378CFB700C897F3 /* String+ut8decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2A3A452378CFB700C897F3 /* String+ut8decode.swift */; };
+		EB2A3A492378D4DB00C897F3 /* CourseInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2A3A482378D4DB00C897F3 /* CourseInfoTableViewController.swift */; };
+		EB2A3A4C2378DF5300C897F3 /* Double+rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2A3A4B2378DF5300C897F3 /* Double+rounded.swift */; };
 		EB6E13402376E0CA002FEF40 /* ParseCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E133F2376E0CA002FEF40 /* ParseCourse.swift */; };
 		EB6E13422376E51A002FEF40 /* CmdGetCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E13412376E51A002FEF40 /* CmdGetCourses.swift */; };
 		EB6E134C237706FF002FEF40 /* FacadeTrailers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E134B237706FF002FEF40 /* FacadeTrailers.swift */; };
@@ -65,6 +67,8 @@
 
 /* Begin PBXFileReference section */
 		EB2A3A452378CFB700C897F3 /* String+ut8decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ut8decode.swift"; sourceTree = "<group>"; };
+		EB2A3A482378D4DB00C897F3 /* CourseInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseInfoTableViewController.swift; sourceTree = "<group>"; };
+		EB2A3A4B2378DF5300C897F3 /* Double+rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+rounded.swift"; sourceTree = "<group>"; };
 		EB6E133F2376E0CA002FEF40 /* ParseCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCourse.swift; sourceTree = "<group>"; };
 		EB6E13412376E51A002FEF40 /* CmdGetCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmdGetCourses.swift; sourceTree = "<group>"; };
 		EB6E134B237706FF002FEF40 /* FacadeTrailers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadeTrailers.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 				EBF95C4F2378752D001E854C /* UIView+cornerRadius.swift */,
 				EBF95C522378822D001E854C /* UIView+dropShadow.swift */,
 				EB2A3A452378CFB700C897F3 /* String+ut8decode.swift */,
+				EB2A3A4B2378DF5300C897F3 /* Double+rounded.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				EBF95C5623788815001E854C /* CourseDetailViewController.swift */,
+				EB2A3A482378D4DB00C897F3 /* CourseInfoTableViewController.swift */,
 			);
 			path = CourseDetail;
 			sourceTree = "<group>";
@@ -364,12 +370,14 @@
 				EB99B1962376BC8E00B93C9A /* GradientView.swift in Sources */,
 				EB99B1D92376DAB900B93C9A /* CoursesListViewController.swift in Sources */,
 				EBF95C5723788815001E854C /* CourseDetailViewController.swift in Sources */,
+				EB2A3A492378D4DB00C897F3 /* CourseInfoTableViewController.swift in Sources */,
 				EB99B1A22376D01000B93C9A /* NavigationViewController.swift in Sources */,
 				EB6E13502377E74A002FEF40 /* CoursesPageViewController.swift in Sources */,
 				EB6E135823780980002FEF40 /* UIPageViewController+goToNextPage.swift in Sources */,
 				EB6E134E237761DA002FEF40 /* FacadeDomestika.swift in Sources */,
 				EBF95C4D23787056001E854C /* CourseCollectionViewCell.swift in Sources */,
 				EB6E13422376E51A002FEF40 /* CmdGetCourses.swift in Sources */,
+				EB2A3A4C2378DF5300C897F3 /* Double+rounded.swift in Sources */,
 				EB99B1802376BAF600B93C9A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

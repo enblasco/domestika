@@ -95,5 +95,13 @@ class CourseDetailViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let ident = segue.identifier ?? ""
+        if ident == "courseInfo" {
+            let courseInfo:CourseInfoTableViewController = segue.destination as! CourseInfoTableViewController
+            courseInfo.course = self.course!
+        }
+    }
+    
     
 }

@@ -21,6 +21,7 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
     var courses:Array<Course>? = []
     final let NUMCURSESINTOP:Int = 4
     final let PERCENTOFTOPPAGE:CGFloat = 43
+    var tapGesture:UITapGestureRecognizer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         self.progress?.startAnimating()
         self.view.addSubview(progress!)
     }
-
+    
     func getInfo(){
         let cmd = CmdGetCourses()
         cmd.callbacks =  CommandCallbacks(
@@ -61,8 +62,7 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         },
             handlerAccept: {
                 
-        }
-        )
+        })
         self.execute(cmd)
     }
     
@@ -74,7 +74,7 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "courseCell", for: indexPath) as! CourseCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CourseCollectionViewCell
         cell.bottomHeight.constant = (cell.bounds.height * 50.0)/100
         cell.viewContainer.dropShadow()
         let course = courses![NUMCURSESINTOP + indexPath.row]
@@ -85,14 +85,19 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         }else{
             cell.teacherCourse.text = ""
         }
-       
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
     }
-  
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let course = courses![NUMCURSESINTOP + indexPath.row]
+        let courseView:CourseDetailViewController = self.storyboard?.instantiateViewController(identifier: "courseDetail") as! CourseDetailViewController
+        courseView.course = course
+        self.navigationController?.pushViewController(courseView, animated: true)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let ident = segue.identifier ?? ""
@@ -113,14 +118,10 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         }
         return true
     }
-    
-    
 }
 extension CoursesListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         print("\(indexPath.row)")
         return CGSize(width: (78.0 * UIScreen.main.bounds.width) / 100, height: collectionView.bounds.height)
     }
-    
-
 }

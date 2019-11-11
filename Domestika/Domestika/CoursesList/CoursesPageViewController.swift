@@ -32,7 +32,6 @@ class CoursesPageViewController: UIPageViewController,UIPageViewControllerDataSo
         let tapGesture = UITapGestureRecognizer(target: self, action: nil)
         tapGesture.delegate = self
         self.view.addGestureRecognizer(tapGesture)
-        
     }
     
     private func setViewsForPageViewController(){
