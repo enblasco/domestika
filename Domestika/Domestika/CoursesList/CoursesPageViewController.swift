@@ -8,12 +8,15 @@
 
 import UIKit
 
+/**
+ Carousel of courses
+ */
 class CoursesPageViewController: UIPageViewController,UIPageViewControllerDataSource,UIGestureRecognizerDelegate{
-    var coursesList:[Course]?
-    var listViews:[UIViewController]? = []
-    var pageControl = UIPageControl(frame: .zero)
-    var currentView = 0
-    var timerPage:Timer?
+    var coursesList:[Course]? //list of courses to show
+    var listViews:[UIViewController]? = [] //list of subviews inside of the carousel
+    var pageControl = UIPageControl(frame: .zero) //Bottom dotteds
+    var currentView = 0 //int to determine the current view showing in carousel
+    var timerPage:Timer? //timer to start automatic carousel
     
     
     override func viewDidLoad()
@@ -23,9 +26,13 @@ class CoursesPageViewController: UIPageViewController,UIPageViewControllerDataSo
         self.delegate   = self
         self.setViewsForPageViewController()
         self.configPageControl()
+        //start animating the carousel
         self.timerPage = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(CoursesPageViewController.setPageControll), userInfo: nil, repeats: true)
     }
     
+    /**
+     when user tap in carousel we stop automatic animation
+     */
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.view.isUserInteractionEnabled = true
@@ -34,6 +41,9 @@ class CoursesPageViewController: UIPageViewController,UIPageViewControllerDataSo
         self.view.addGestureRecognizer(tapGesture)
     }
     
+    /**
+     instance all courses subviews
+     */
     private func setViewsForPageViewController(){
         var isFirst = true
         for course in coursesList!{
@@ -47,6 +57,9 @@ class CoursesPageViewController: UIPageViewController,UIPageViewControllerDataSo
         }
     }
     
+    /**
+     configure the bottom dotteds
+     */
     private func configPageControl(){
         pageControl.addTarget(self, action: #selector(self.pageControlSelectionAction(_:)), for: .touchUpInside)
         pageControl.numberOfPages = listViews!.count
@@ -63,15 +76,24 @@ class CoursesPageViewController: UIPageViewController,UIPageViewControllerDataSo
         self.view.addConstraints([leading, trailing, bottom])
     }
     
+    /**
+     function called automatically by the timer. Go to next course
+     */
     @objc func setPageControll(){
         changeCourse(page: pageControl.currentPage + 1)
     }
     
+    /**
+     function called automatically by the page control. Go to next course
+     */
     @objc func pageControlSelectionAction(_ sender: UIPageControl) {
         let page: Int? = sender.currentPage
         changeCourse(page: page!)
     }
     
+    /**
+     change next o prev course. Called by the page control (dotteds)
+     */
     private func changeCourse(page:Int){
         pageControl.currentPage = page
         if page >= currentView && page != 0 {
@@ -81,12 +103,15 @@ class CoursesPageViewController: UIPageViewController,UIPageViewControllerDataSo
         }
     }
     
+    
+    // MARK: - Page view controller navigation control
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         currentView -= 1
         
         guard let viewControllerIndex = listViews!.firstIndex(of: viewController) else { return nil }
         
+        //print dotted
         let previousIndex = viewControllerIndex - 1
         if currentView == -1 {
             pageControl.currentPage = listViews!.count - 1
@@ -112,6 +137,7 @@ class CoursesPageViewController: UIPageViewController,UIPageViewControllerDataSo
         
         let nextIndex = viewControllerIndex + 1
         
+        //print dotted
         if currentView > (listViews!.count - 1) || currentView == 0 {
             pageControl.currentPage = 0
             currentView = 0
@@ -128,6 +154,10 @@ class CoursesPageViewController: UIPageViewController,UIPageViewControllerDataSo
         return listViews![nextIndex]
     }
     
+    
+    /**
+     invalidate timer when user tap in carousel
+     */
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         if timerPage != nil {
             timerPage!.invalidate()
