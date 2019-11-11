@@ -15,7 +15,6 @@ class CourseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleCourse: UILabel!
     @IBOutlet weak var teacherCourse: UILabel!
     @IBOutlet weak var viewContainer: UIView!
-    @IBOutlet weak var btnVerCurso: UIButton!
     @IBOutlet weak var contentCell: CourseCollectionViewCell!
     
 }
