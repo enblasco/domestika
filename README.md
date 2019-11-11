@@ -32,12 +32,12 @@ Backend request architecture
 
 * [UIView+fade](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/UIView%2Bfade.swift) - Fade in/out animation
 * [UIButton+cornerRadius](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/UIButton%2BcornerRadius.swift) - Corner radius feature 
-* [UIPageViewController+goToNextPage](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/UIPageViewController%goToNextPage.swift) - Carouser control
-* [UIImageView+downloaded](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/UIImageView%downloaded.swift) - Download image from url in background task
-* [UIView+cornerRadius](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/UIView%cornerRadius.swift) - Corner radius feature
-* [UIView+dropShadow](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/UIView%dropShadow.swift) - Print shadow
-* [String+ut8decode](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/String%ut8decode.swift) - decode / encode utf8String
-* [Double+rounded](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/Double%rounded.swift) - Rounded two decimals
+* [UIPageViewController+goToNextPage](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/UIPageViewController%2BgoToNextPage.swift) - Carouser control
+* [UIImageView+downloaded](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/UIImageView%2Bdownloaded.swift) - Download image from url in background task
+* [UIView+cornerRadius](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/UIView%2BcornerRadius.swift) - Corner radius feature
+* [UIView+dropShadow](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/UIView%2BdropShadow.swift) - Print shadow
+* [String+ut8decode](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/String%2But8decode.swift) - decode / encode utf8String
+* [Double+rounded](https://github.com/enblasco/domestika/blob/master/Domestika/Domestika/Extensions/Double%2Brounded.swift) - Rounded two decimals
 
 
 ## BaseLibrary
