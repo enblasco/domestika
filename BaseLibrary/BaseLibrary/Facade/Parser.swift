@@ -8,8 +8,10 @@
 
 import UIKit
 
-public protocol Parser
-{
+/**
+ parser protocol
+ */
+public protocol Parser {
     associatedtype T
     func parse(_: AnyObject) -> T
 }

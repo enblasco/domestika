@@ -23,46 +23,38 @@ open class Execute: NSObject {
     }
     
     public static func getInstance() -> Execute {
-        if (INSTANCE == nil)
-        {
+        if (INSTANCE == nil){
             createInstance()
         }
         return INSTANCE!
     }
     
-    open func exeute(_ cmd: CommandBase, view: UIViewController)
-    {
+    open func exeute(_ cmd: CommandBase, view: UIViewController) {
         var existe = false
-        for c in commands
-        {
-            if(c == cmd)
-            {
+        for c in commands {
+            if(c == cmd){
                 existe = true
                 break
             }
         }
         
-        if(!existe)
-        {
+        if(!existe){
             commands.append(cmd)
         }
         cmd.executeTask(view)
     }
     
-    func cancelCommad(_ cmd: CommandBase)
-    {
+    func cancelCommad(_ cmd: CommandBase){
         cmd.cancel = true
         removeCommand(cmd)
     }
     
-    open func removeCommand(_ cmd: CommandBase)
-    {
+    open func removeCommand(_ cmd: CommandBase){
         let index = commands.firstIndex(of: cmd)
         commands.remove(at: index!)
     }
     
-    open func removeCommands()
-    {
+    open func removeCommands(){
         for cmd in commands{
             cancelCommad(cmd)
         }

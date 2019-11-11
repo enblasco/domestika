@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ command callbacks
+ */
 open class CommandCallbacks {
     
     var retry: (() -> Void)?
@@ -39,8 +42,7 @@ open class CommandCallbacks {
         }
     }
     
-    public init(handlerStart: @escaping (() -> Void), handlerFinish: @escaping (() -> Void), handlerRetry: @escaping (() -> Void), handlerAccept: @escaping (() -> Void))
-    {
+    public init(handlerStart: @escaping (() -> Void), handlerFinish: @escaping (() -> Void), handlerRetry: @escaping (() -> Void), handlerAccept: @escaping (() -> Void)){
         self.retry = handlerRetry
         self.accept = handlerAccept
         self.start = handlerStart

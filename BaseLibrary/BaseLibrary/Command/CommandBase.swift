@@ -9,6 +9,10 @@
 import UIKit
 import CoreLocation
 
+/**
+ Run background task
+ Manage the task event and rerun in the main thread
+ */
 open class CommandBase: NSObject {
     open var succesMessage: String = ""
     open var needInternet: Bool = true
@@ -20,6 +24,9 @@ open class CommandBase: NSObject {
     open var callbacks: CommandCallbacks?
     var ejecutador = Execute.getInstance()
     
+    /**
+     starat execute task
+     */
     open func executeTask(_ view: UIViewController)
     {
         self.view = view
@@ -37,39 +44,36 @@ open class CommandBase: NSObject {
     
     open func execute() throws {}
     
-    
+    /**
+     when finish the thread
+     */
     open func onPostExecute()
     {
         //launch in main threat
         DispatchQueue.main.async(execute: {
-            if(!self.cancel)
-            {
-                if(self.error != "" && self.errorMessage != "")
-                {
-                    self.mostrarAviso(self.errorMessage, showRetry: true)
-                }
-                else
-                {
+            if(!self.cancel){
+                if(self.error != "" && self.errorMessage != ""){
+                    self.showAlert(self.errorMessage, showRetry: true)
+                }else{
                     self.Finished()
                 }
             }
         });
-        
     }
     
     open func isNeedInternet() -> Bool {
         return needInternet
     }
     
-    
-    func mostrarAviso(_ msg: String, showRetry: Bool)
-    {
+    /**
+     showr error
+     */
+    func showAlert(_ msg: String, showRetry: Bool){
         let alert = UIAlertController(title: NSLocalizedString("error", comment: ""), message: msg, preferredStyle: UIAlertController.Style.alert)
-        
-        let retry: UIAlertAction = UIAlertAction(title: NSLocalizedString("retry", comment: ""), style: .default) { action -> Void in
+        let retry: UIAlertAction = UIAlertAction(title: NSLocalizedString("Retry", comment: ""), style: .default) { action -> Void in
             self.retry()
         }
-        let accept: UIAlertAction = UIAlertAction(title: NSLocalizedString("accept", comment: ""), style: .default) { action -> Void in
+        let accept: UIAlertAction = UIAlertAction(title: NSLocalizedString("Accept", comment: ""), style: .default) { action -> Void in
             self.accept()
         }
         alert.addAction(retry)
@@ -77,44 +81,38 @@ open class CommandBase: NSObject {
         view!.present(alert, animated: true, completion: nil)
     }
     
+    
+    /**
+     task events
+     */
     open func onCancelled() {
-        if(cancelable)
-        {
+        if(cancelable){
             cancel = true
         }
     }
     
     open func Finished(){
-        if(callbacks != nil)
-        {
+        if(callbacks != nil){
             callbacks!.onFinish()
         }
-        
     }
     
     open func Start(){
-        if(callbacks != nil)
-        {
+        if(callbacks != nil){
             callbacks!.onStart()
         }
     }
     
-    open func retry()
-    {
-        if(callbacks != nil)
-        {
+    open func retry(){
+        if(callbacks != nil){
             callbacks!.onRetry()
         }
-        
     }
     
-    open func accept()
-    {
-        if(callbacks != nil)
-        {
+    open func accept(){
+        if(callbacks != nil){
             callbacks!.onAccept()
         }
-        
     }
     
 }

@@ -9,6 +9,9 @@
 import Foundation
 import SystemConfiguration
 
+/**
+ Class to detect internet connection
+ */
 open class Reachability {
     
     class func isConnectedToNetwork() -> Bool {
