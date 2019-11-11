@@ -359,7 +359,6 @@
                     <navigationItem key="navigationItem" id="16E-R5-4SV"/>
                     <connections>
                         <outlet property="collectionView" destination="1zS-I0-Tqt" id="m9b-Br-4IU"/>
-                        <outlet property="containerView" destination="ZJG-b4-hPR" id="F3X-yK-vBh"/>
                         <outlet property="heightCoursesPage" destination="lxB-cs-TSJ" id="jes-gx-9KQ"/>
                         <outlet property="lblSelectedCourses" destination="hWQ-57-hsh" id="Uou-Na-vCy"/>
                     </connections>

@@ -9,19 +9,18 @@
 import UIKit
 import BaseLibrary
 
+/**
+ main class that controls the course carousel and the collectionview
+ */
 class CoursesListViewController: MyView , UICollectionViewDelegate, UICollectionViewDataSource{
     
+    @IBOutlet weak var lblSelectedCourses: UILabel!//static text "seleccionado para ti". It is initially hidden but we show it when we get the courses
+    @IBOutlet weak var collectionView: UICollectionView! //the collection view
+    @IBOutlet weak var heightCoursesPage: NSLayoutConstraint! //height of top carousel. Calculate the percent in relation of the screen
     
-    
-    @IBOutlet weak var lblSelectedCourses: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var heightCoursesPage: NSLayoutConstraint!
-    
-    var courses:Array<Course>? = []
-    final let NUMCURSESINTOP:Int = 4
-    final let PERCENTOFTOPPAGE:CGFloat = 43
-    var tapGesture:UITapGestureRecognizer?
+    var courses:Array<Course>? = [] //courses array
+    final let NUMCURSESINTOP:Int = 4 //constant to determine the number of courses in top carousel
+    final let PERCENTOFTOPPAGE:CGFloat = 43 //constant to determine the percent of top carousel in relation of the screen
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +32,16 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         self.navigationController?.setNavigationBarHidden(true, animated: true) //hidde navigationbar
     }
     
+    /**
+     prepare and configure  collectionview, height of carousel and activity indication
+     */
     private func setViews(){
+        //collection view delegate
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        //height of carousel
         self.heightCoursesPage.constant = (PERCENTOFTOPPAGE * UIScreen.main.bounds.height) / 100
+        //instance progress circle
         self.progress = UIActivityIndicatorView(style: .large)
         self.progress?.center = self.view.center
         self.progress?.hidesWhenStopped = false
@@ -44,6 +49,9 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         self.view.addSubview(progress!)
     }
     
+    /**
+     get courses
+     */
     func getInfo(){
         let cmd = CmdGetCourses()
         cmd.callbacks =  CommandCallbacks(
@@ -66,7 +74,9 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         self.execute(cmd)
     }
     
+    // MARK: - Collection view data source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //if have more than four courses, we print the rest in collection view
         if self.courses!.count > NUMCURSESINTOP {
             return Array(self.courses![NUMCURSESINTOP...self.courses!.count-1]).count
         }
@@ -75,8 +85,12 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CourseCollectionViewCell
-        cell.bottomHeight.constant = (cell.bounds.height * 50.0)/100
-        cell.viewContainer.dropShadow()
+        
+        //configure cell view
+        cell.bottomHeight.constant = (cell.bounds.height * 50.0)/100 //height of bottom view in cell
+        cell.viewContainer.dropShadow() //print shadow
+        
+        //print course in cell
         let course = courses![NUMCURSESINTOP + indexPath.row]
         cell.imgCourse.downloaded(from: course.thumbnailUrl!)
         cell.titleCourse.text = course.title!
@@ -85,6 +99,7 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         }else{
             cell.teacherCourse.text = ""
         }
+        
         return cell
     }
     
@@ -99,6 +114,10 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         self.navigationController?.pushViewController(courseView, animated: true)
     }
     
+    
+    /**
+     show top carousel. The carousel is embebed and we manage it whit the segue
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let ident = segue.identifier ?? ""
         if ident == "toCoursesPage" {
@@ -108,6 +127,9 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         }
     }
     
+    /**
+     We canceled the show the carousel. We look forward to receiving all courses
+     */
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         if let ident = identifier {
             if ident == "toCoursesPage" {
@@ -119,6 +141,10 @@ class CoursesListViewController: MyView , UICollectionViewDelegate, UICollection
         return true
     }
 }
+
+/**
+ extensioin: Set cell height
+ */
 extension CoursesListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         print("\(indexPath.row)")
