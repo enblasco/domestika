@@ -9,49 +9,47 @@
 import UIKit
 import BaseLibrary
 
+
+/**
+ Prepare session to send post and get calls
+ */
 class FacadeDomestika: FacadeClient, URLSessionDelegate {
     static let instance = FacadeDomestika()
     let HOST = "https://my-json-server.typicode.com/emilioicai/"
     
     override func WriteResponseToStream(_ facade: String, command: String, argsMessage: String!, datos: inout AnyObject?) throws{
         
+        //make the url
         let url = HOST+facade+"/"+command
         
+        //instance request
         let req = NSMutableURLRequest(url: URL(string: url)!)
         
+        //cconfigure request
         req.httpMethod = GET
-        req.timeoutInterval = 10
-
+        req.timeoutInterval = 10 //timeout
+        
         let config = URLSessionConfiguration.default
         let session = Foundation.URLSession(configuration:config, delegate: self, delegateQueue:nil)
         
+        //send call
         let (data, res, error) = session.synchronousDataTaskWithRequest(req as URLRequest)
         
+        //analice the result
         if(error == nil)
         {
-            if(res!.statusCode == 555 || res!.statusCode == 200)
-            {
-                
-                if(res!.statusCode == 555)
-                {
-                   throw ErrorFacade.serverError("")
-                }
-                else
-                {
-                    
-                    if self.setJSON(data!) != nil
-                    {
-                        datos =  self.setJSON(data!)!
+            if(res!.statusCode == 555 || res!.statusCode == 200){
+                if(res!.statusCode == 555){
+                    throw ErrorFacade.serverError("")
+                }else{
+                    if self.setJSON(data!) != nil{
+                        datos =  self.setJSON(data!)! //all is ok!!!! read json
                     }
                 }
-                
-            }
-            else
-            {
+            }else{
                 throw ErrorFacade.serverError(String(data: data!, encoding: String.Encoding.utf8)!)
             }
-        }
-        else{
+        }else{
             throw ErrorFacade.serverError(error!.description)
         }
         
@@ -74,7 +72,7 @@ extension URLSession {
         dataTask(with: url, completionHandler: {
             data = $0; response = $1; error = $2 as NSError?
             semaphore.signal()
-            }).resume()
+        }).resume()
         
         _ = semaphore.wait(timeout: DispatchTime.distantFuture)
         

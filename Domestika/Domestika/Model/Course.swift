@@ -9,6 +9,9 @@
 import UIKit
 import BaseLibrary
 
+/**
+ course model. I use objc var because is needed to asign automaticly the json data to object attribute
+ */
 class Course: ModelBase{
     @objc var id: NSNumber? = 0
     @objc var thumbnailUrl:String? = ""

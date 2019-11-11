@@ -8,6 +8,10 @@
 
 import UIKit
 @IBDesignable
+
+/**
+configure xcode to add new properties to the view. We add the ability to create a view with gradient
+ */
 class GradientView: UIView {
 
     @IBInspectable var startColor:   UIColor = .black { didSet { updateColors() }}
